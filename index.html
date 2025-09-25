@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, MUNMUN! 🎉</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;700&display=swap');
+
+        :root {
+            --primary-color: #ff69b4; /* Hot Pink */
+            --secondary-color: #f0f0f0; /* Light Gray */
+            --text-color: #333; /* Dark Gray */
+            --heart-color: #ff4d4d; /* Red */
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://images.unsplash.com/photo-1549488344-9357494a8f3b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--text-color);
+            text-align: center;
+            line-height: 1.6;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .container {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 900px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .header {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .profile-pic {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .message {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-style: italic;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 1rem;
+            background-color: var(--secondary-color);
+            border-radius: 15px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid var(--primary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-message {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .heart-confetti {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 9999;
+        }
+
+        .heart {
+            position: absolute;
+            background-color: var(--heart-color);
+            width: 15px;
+            height: 15px;
+            transform: rotate(-45deg);
+            animation: fall linear infinite;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: var(--heart-color);
+            border-radius: 50%;
+        }
+
+        .heart:before {
+            top: -7.5px;
+            left: 0;
+        }
+
+        .heart:after {
+            top: 0;
+            left: 7.5px;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        .play-button {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 50px;
+            margin-top: 1rem;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .play-button:hover {
+            background-color: #e652a2;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <audio id="background-music" src="Stephen Sanchez - Until I Found You (Official Video) (1).mp4" loop></audio>
+
+    <div class="heart-confetti"></div>
+
+    <div class="container">
+        <h1 class="header">Happy Birthday, MUNMUN! 🎉</h1>
+        <img src="WhatsApp Image 2025-09-24 at 22.48.57_f469dbc9.jpg" alt="Your beautiful photo" class="profile-pic">
+        <p class="message">
+            My Dearest MUMU,Words can't describe how I feel for you,I know maybe you are everything i need but i aint even a bit of a thing u want..... I had begged you to love me,i have been ghosted by you multiple times even now also,but one thing i had felt in this whole journey is that,I just feel good and happy by spending time with you....I have many things to say and maybe some will hurt you,so am just keeping it aside as I dont wanna spoil ur day....but yeah I LOVE YOU but from now on i won,t be begging you to love me,if u do or you will in future then its upto you as i will be there for you....and will be waiting for youuuu..... 
+            <br><br>
+            I hope you have the most wonderful day, surrounded by all the people and things that make you happy. You deserve all the joy in the world. Thank you for being you and for making my life a million times better by spending time with me... i don't know if you will even stay by my side rather than ghosting me...but yeah u got me by ur side no matter what...I gonna be someone who will always support you and will back u at ur lowest..... 
+            <br><br>
+            I love you more than words can describe.....i really do... i wanna spent my life with you but i guess i ain't the one that u dream off.....but yeaahhh HAPPY BIRTHDAY PRINCESS....MAY GOD FULFILL ALL UR WISHES AND YEAH BE HAPPY ALWAYS AND DON'T LET THAT CUTE SMILE ON UR FACE FADE AWAY...... 
+        </p>
+        <button id="play-pause-button" class="play-button">Play Music</button>
+
+        <div class="gallery">
+            <img src="4213.jpg" alt="Gallery photo 1">
+            <img src="5097.jpg" alt="Gallery photo 2">
+            <img src="5320.jpg" alt="Gallery photo 3">
+            <img src="5321.jpg" alt="Gallery photo 4">
+            <img src="5322.jpg" alt="Gallery photo 5">
+        </div>
+
+        <p class="footer-message">FROM,<br>SOMEONE WHO LOVES YOU......ADMIRES YOU.....CARE ABOUT YOU....AND MISSES YOU....<BR>SORRY IF I HAD DONE ANYTHING....</p>
+    </div>
+
+    <script>
+        // JavaScript for the confetti hearts
+        const heartConfetti = document.querySelector('.heart-confetti');
+        const numHearts = 50;
+
+        for (let i = 0; i < numHearts; i++) {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = `${Math.random() * 100}vw`;
+            heart.style.animationDuration = `${Math.random() * 2 + 3}s`;
+            heart.style.animationDelay = `${Math.random() * 2}s`;
+            heartConfetti.appendChild(heart);
+        }
+        // JavaScript for the music player
+        const music = document.getElementById('background-music');
+        const playPauseButton = document.getElementById('play-pause-button');
+        let isPlaying = false;
+
+        playPauseButton.addEventListener('click', () => {
+            if (isPlaying) {
+                music.pause();
+                playPauseButton.textContent = 'Play Music';
+            } else {
+                music.play();
+                playPauseButton.textContent = 'Pause Music';
+            }
+            isPlaying = !isPlaying;
+        });
+    </script>
+
+</body>
+</html>
